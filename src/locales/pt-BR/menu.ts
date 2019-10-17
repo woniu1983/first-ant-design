@@ -51,4 +51,7 @@ export default {
   'menu.devtools': 'Desenvolver Ferramentas',
   'menu.devtools.strcodec': 'String Encoding',
   'menu.devtools.strencrypt': 'String Encrypt',
+  'menu.devtools.domain': 'Domain',
+  'menu.ldaptools': 'LDAP',
+  'menu.ldaptools.ldaplist': 'Domain List',
 };

@@ -51,4 +51,7 @@ export default {
   'menu.devtools': '開發工具',
   'menu.devtools.strcodec': '字串編碼',
   'menu.devtools.strencrypt': '字串加密',
+  'menu.devtools.domain': 'LDAP域',
+  'menu.ldaptools': 'LDAP域',
+  'menu.ldaptools.ldaplist': '域列表',
 };

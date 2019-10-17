@@ -7,12 +7,14 @@
 import ProLayout, {
   MenuDataItem,
   BasicLayoutProps as ProLayoutProps,
+  DefaultFooter,
   Settings,
 } from '@ant-design/pro-layout';
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactElement, ReactNode } from 'react';
 import Link from 'umi/link';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
+import { Icon } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
 
 import Authorized from '@/utils/Authorized';
@@ -48,7 +50,24 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
 
 const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
   if (!isAntDesignPro()) {
-    return defaultDom;
+    return React.cloneElement(defaultDom as ReactElement, {
+      links: [
+        {
+          key: 'Ant Design Pro',
+          title: 'Ant Design Pro',
+          href: 'https://pro.ant.design',
+          blankTarget: true,
+        },
+        {
+          key: 'github',
+          title: <Icon type="github" />,
+          href: 'https://github.com/woniu1983',
+          blankTarget: true,
+        },
+      ], 
+      copyright: '2019 山君',
+    });
+    // return defaultFooterDom;
   }
   return (
     <>

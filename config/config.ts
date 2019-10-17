@@ -78,7 +78,7 @@ export default {
     defaultGitUrl: 'https://github.com/ant-design/pro-blocks',
     agent: require('tunnel').httpsOverHttp({
       proxy: {
-        host: '192.168.1.1',
+        host: '172.25.75.2',
         port: '8080',
       },
     }),
@@ -164,8 +164,27 @@ export default {
                   path: '/devtools/strencrypt',
                   component: './devtools/strencrypt',
                 },
+                {
+                  name: 'domain',
+                  path: '/devtools/domain',
+                  component: './devtools/domain',
+                },
               ],
             },
+
+            {
+              name: 'ldaptools',
+              path: '/ldaptools',
+              icon: 'tool',
+              routes: [
+                {
+                  name: 'ldaplist',
+                  path: '/ldaptools/ldaplist',
+                  component: './ldaptools/ldaplist',
+                },
+              ],
+            },
+
             {
               name: 'list',
               path: '/list',

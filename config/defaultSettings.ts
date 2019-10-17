@@ -70,7 +70,7 @@ export default {
   "menu": {
     "locale": true
   },
-  "title": "Ant Design Pro",
+  "title": "山君",
   "pwa": false,
   "iconfontUrl": "",
   "collapse": true,
